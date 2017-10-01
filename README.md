@@ -3,6 +3,8 @@ Phylogenetic tree for the taxa in sPlot 2.1
 Oliver Purschke
 01 Oktober, 2017
 
+This document describes the workflow (with contributions from Brody Sandel) that was used to generate the phylogenetic tree for the taxa in the global vegetation plot database sPlot (v. 2.1).
+
 Load required packages
 ======================
 

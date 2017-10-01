@@ -38489,4 +38489,1537 @@ output file: sPlot_Phylo.knit.md
 /usr/bin/pandoc +RTS -K512m -RTS sPlot_Phylo.utf8.md --to latex --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output sPlot_Phylo.pdf --table-of-contents --toc-depth 2 --template /home/oliver/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmd/latex/default-1.15.2.tex --number-sections --highlight-style tango --latex-engine pdflatex --variable graphics=yes --variable 'geometry:margin=1in' --bibliography bibliography.bib --filter /usr/bin/pandoc-citeproc 
 
 Output created: sPlot_Phylo.pdf
+> render("sPlot_Phylo.Rmd", c("md_document"))
+
+
+processing file: sPlot_Phylo.Rmd
+  |.                                                                |   1%
+   inline R code fragments
+
+  |..                                                               |   2%
+label: unnamed-chunk-1 (with options) 
+List of 3
+ $ echo : symbol T
+ $ eval : symbol T
+ $ quiet: symbol T
+
+  |..                                                               |   4%
+  ordinary text without R code
+
+  |...                                                              |   5%
+label: unnamed-chunk-2 (with options) 
+List of 2
+ $ echo: symbol F
+ $ eval: symbol F
+
+  |....                                                             |   6%
+  ordinary text without R code
+
+  |.....                                                            |   7%
+label: unnamed-chunk-3 (with options) 
+List of 2
+ $ echo: symbol F
+ $ eval: symbol F
+
+  |.....                                                            |   8%
+  ordinary text without R code
+
+  |......                                                           |  10%
+label: unnamed-chunk-4 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.......                                                          |  11%
+  ordinary text without R code
+
+  |........                                                         |  12%
+label: unnamed-chunk-5 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |.........                                                        |  13%
+  ordinary text without R code
+
+  |.........                                                        |  14%
+label: unnamed-chunk-6 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |..........                                                       |  16%
+  ordinary text without R code
+
+  |...........                                                      |  17%
+label: unnamed-chunk-7 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |............                                                     |  18%
+  ordinary text without R code
+
+  |.............                                                    |  19%
+label: unnamed-chunk-8 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |.............                                                    |  20%
+  ordinary text without R code
+
+  |..............                                                   |  22%
+label: unnamed-chunk-9 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |...............                                                  |  23%
+  ordinary text without R code
+
+  |................                                                 |  24%
+label: unnamed-chunk-10 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |................                                                 |  25%
+  ordinary text without R code
+
+  |.................                                                |  27%
+label: unnamed-chunk-11 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |..................                                               |  28%
+  ordinary text without R code
+
+  |...................                                              |  29%
+label: unnamed-chunk-12 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |....................                                             |  30%
+  ordinary text without R code
+
+  |....................                                             |  31%
+label: unnamed-chunk-13 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |.....................                                            |  33%
+  ordinary text without R code
+
+  |......................                                           |  34%
+label: unnamed-chunk-14 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |.......................                                          |  35%
+  ordinary text without R code
+
+  |.......................                                          |  36%
+label: unnamed-chunk-15 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |........................                                         |  37%
+  ordinary text without R code
+
+  |.........................                                        |  39%
+label: unnamed-chunk-16 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |..........................                                       |  40%
+  ordinary text without R code
+
+  |...........................                                      |  41%
+label: unnamed-chunk-17 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |...........................                                      |  42%
+  ordinary text without R code
+
+  |............................                                     |  43%
+label: unnamed-chunk-18 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.............................                                    |  45%
+  ordinary text without R code
+
+  |..............................                                   |  46%
+label: unnamed-chunk-19 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |...............................                                  |  47%
+  ordinary text without R code
+
+  |...............................                                  |  48%
+label: unnamed-chunk-20 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |................................                                 |  49%
+  ordinary text without R code
+
+  |.................................                                |  51%
+label: unnamed-chunk-21 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |..................................                               |  52%
+  ordinary text without R code
+
+  |..................................                               |  53%
+label: unnamed-chunk-22 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |...................................                              |  54%
+  ordinary text without R code
+
+  |....................................                             |  55%
+label: unnamed-chunk-23 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.....................................                            |  57%
+  ordinary text without R code
+
+  |......................................                           |  58%
+label: unnamed-chunk-24 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |......................................                           |  59%
+  ordinary text without R code
+
+  |.......................................                          |  60%
+label: unnamed-chunk-25 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |........................................                         |  61%
+  ordinary text without R code
+
+  |.........................................                        |  63%
+label: unnamed-chunk-26 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |..........................................                       |  64%
+  ordinary text without R code
+
+  |..........................................                       |  65%
+label: unnamed-chunk-27 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |...........................................                      |  66%
+  ordinary text without R code
+
+  |............................................                     |  67%
+label: unnamed-chunk-28 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.............................................                    |  69%
+  ordinary text without R code
+
+  |.............................................                    |  70%
+label: unnamed-chunk-29 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |..............................................                   |  71%
+  ordinary text without R code
+
+  |...............................................                  |  72%
+label: unnamed-chunk-30 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |................................................                 |  73%
+  ordinary text without R code
+
+  |.................................................                |  75%
+label: unnamed-chunk-31 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.................................................                |  76%
+  ordinary text without R code
+
+  |..................................................               |  77%
+label: unnamed-chunk-32 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |...................................................              |  78%
+  ordinary text without R code
+
+  |....................................................             |  80%
+label: unnamed-chunk-33 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |....................................................             |  81%
+  ordinary text without R code
+
+  |.....................................................            |  82%
+label: unnamed-chunk-34 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |......................................................           |  83%
+  ordinary text without R code
+
+  |.......................................................          |  84%
+label: unnamed-chunk-35 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |........................................................         |  86%
+  ordinary text without R code
+
+  |........................................................         |  87%
+label: unnamed-chunk-36 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.........................................................        |  88%
+  ordinary text without R code
+
+  |..........................................................       |  89%
+label: unnamed-chunk-37 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |...........................................................      |  90%
+  ordinary text without R code
+
+  |............................................................     |  92%
+label: unnamed-chunk-38 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |............................................................     |  93%
+  ordinary text without R code
+
+  |.............................................................    |  94%
+label: unnamed-chunk-39 (with options) 
+List of 1
+ $ out.width: chr "470px"
+
+  |..............................................................   |  95%
+  ordinary text without R code
+
+  |...............................................................  |  96%
+label: unnamed-chunk-40 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |...............................................................  |  98%
+  ordinary text without R code
+
+  |................................................................ |  99%
+label: unnamed-chunk-41 (with options) 
+List of 1
+ $ eval: symbol T
+
+  |.................................................................| 100%
+  ordinary text without R code
+
+
+output file: sPlot_Phylo.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS sPlot_Phylo.utf8.md --to markdown_strict --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output sPlot_Phylo.md --standalone --bibliography bibliography.bib --filter /usr/bin/pandoc-citeproc 
+
+Output created: sPlot_Phylo.md
+> setwd("/home/oliver/Dokumente/PhD/PostPhD/IDiv/sDiv/sPlot/Analyses/Code/sPlot_Phylogeny")
+[1] "/home/oliver/Dokumente/PhD/PostPhD/IDiv/sDiv/sPlot/Analyses/Code/sPlot_Phylogeny_backup"
+> setwd("/home/oliver/Dokumente/PhD/PostPhD/IDiv/sDiv/sPlot/Analyses/Code/sPlot_Phylogeny")
+> render("sPlot_Phylo.Rmd", c("md_document"))
+
+
+processing file: sPlot_Phylo.Rmd
+  |.                                                                |   1%
+   inline R code fragments
+
+  |..                                                               |   2%
+label: unnamed-chunk-1 (with options) 
+List of 3
+ $ echo : symbol T
+ $ eval : symbol T
+ $ quiet: symbol T
+
+  |..                                                               |   4%
+  ordinary text without R code
+
+  |...                                                              |   5%
+label: unnamed-chunk-2 (with options) 
+List of 2
+ $ echo: symbol F
+ $ eval: symbol F
+
+  |....                                                             |   6%
+  ordinary text without R code
+
+  |.....                                                            |   7%
+label: unnamed-chunk-3 (with options) 
+List of 2
+ $ echo: symbol F
+ $ eval: symbol F
+
+  |.....                                                            |   8%
+  ordinary text without R code
+
+  |......                                                           |  10%
+label: unnamed-chunk-4 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.......                                                          |  11%
+  ordinary text without R code
+
+  |........                                                         |  12%
+label: unnamed-chunk-5 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |.........                                                        |  13%
+  ordinary text without R code
+
+  |.........                                                        |  14%
+label: unnamed-chunk-6 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |..........                                                       |  16%
+  ordinary text without R code
+
+  |...........                                                      |  17%
+label: unnamed-chunk-7 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |............                                                     |  18%
+  ordinary text without R code
+
+  |.............                                                    |  19%
+label: unnamed-chunk-8 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |.............                                                    |  20%
+  ordinary text without R code
+
+  |..............                                                   |  22%
+label: unnamed-chunk-9 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |...............                                                  |  23%
+  ordinary text without R code
+
+  |................                                                 |  24%
+label: unnamed-chunk-10 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |................                                                 |  25%
+  ordinary text without R code
+
+  |.................                                                |  27%
+label: unnamed-chunk-11 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |..................                                               |  28%
+  ordinary text without R code
+
+  |...................                                              |  29%
+label: unnamed-chunk-12 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |....................                                             |  30%
+  ordinary text without R code
+
+  |....................                                             |  31%
+label: unnamed-chunk-13 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |.....................                                            |  33%
+  ordinary text without R code
+
+  |......................                                           |  34%
+label: unnamed-chunk-14 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |.......................                                          |  35%
+  ordinary text without R code
+
+  |.......................                                          |  36%
+label: unnamed-chunk-15 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |........................                                         |  37%
+  ordinary text without R code
+
+  |.........................                                        |  39%
+label: unnamed-chunk-16 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |..........................                                       |  40%
+  ordinary text without R code
+
+  |...........................                                      |  41%
+label: unnamed-chunk-17 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |...........................                                      |  42%
+  ordinary text without R code
+
+  |............................                                     |  43%
+label: unnamed-chunk-18 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.............................                                    |  45%
+  ordinary text without R code
+
+  |..............................                                   |  46%
+label: unnamed-chunk-19 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |...............................                                  |  47%
+  ordinary text without R code
+
+  |...............................                                  |  48%
+label: unnamed-chunk-20 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |................................                                 |  49%
+  ordinary text without R code
+
+  |.................................                                |  51%
+label: unnamed-chunk-21 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |..................................                               |  52%
+  ordinary text without R code
+
+  |..................................                               |  53%
+label: unnamed-chunk-22 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |...................................                              |  54%
+  ordinary text without R code
+
+  |....................................                             |  55%
+label: unnamed-chunk-23 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.....................................                            |  57%
+  ordinary text without R code
+
+  |......................................                           |  58%
+label: unnamed-chunk-24 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |......................................                           |  59%
+  ordinary text without R code
+
+  |.......................................                          |  60%
+label: unnamed-chunk-25 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |........................................                         |  61%
+  ordinary text without R code
+
+  |.........................................                        |  63%
+label: unnamed-chunk-26 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |..........................................                       |  64%
+  ordinary text without R code
+
+  |..........................................                       |  65%
+label: unnamed-chunk-27 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |...........................................                      |  66%
+  ordinary text without R code
+
+  |............................................                     |  67%
+label: unnamed-chunk-28 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.............................................                    |  69%
+  ordinary text without R code
+
+  |.............................................                    |  70%
+label: unnamed-chunk-29 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |..............................................                   |  71%
+  ordinary text without R code
+
+  |...............................................                  |  72%
+label: unnamed-chunk-30 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |................................................                 |  73%
+  ordinary text without R code
+
+  |.................................................                |  75%
+label: unnamed-chunk-31 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.................................................                |  76%
+  ordinary text without R code
+
+  |..................................................               |  77%
+label: unnamed-chunk-32 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |...................................................              |  78%
+  ordinary text without R code
+
+  |....................................................             |  80%
+label: unnamed-chunk-33 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |....................................................             |  81%
+  ordinary text without R code
+
+  |.....................................................            |  82%
+label: unnamed-chunk-34 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |......................................................           |  83%
+  ordinary text without R code
+
+  |.......................................................          |  84%
+label: unnamed-chunk-35 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |........................................................         |  86%
+  ordinary text without R code
+
+  |........................................................         |  87%
+label: unnamed-chunk-36 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.........................................................        |  88%
+  ordinary text without R code
+
+  |..........................................................       |  89%
+label: unnamed-chunk-37 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |...........................................................      |  90%
+  ordinary text without R code
+
+  |............................................................     |  92%
+label: unnamed-chunk-38 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |............................................................     |  93%
+  ordinary text without R code
+
+  |.............................................................    |  94%
+label: unnamed-chunk-39 (with options) 
+List of 1
+ $ out.width: chr "470px"
+
+  |..............................................................   |  95%
+  ordinary text without R code
+
+  |...............................................................  |  96%
+label: unnamed-chunk-40 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |...............................................................  |  98%
+  ordinary text without R code
+
+  |................................................................ |  99%
+label: unnamed-chunk-41 (with options) 
+List of 1
+ $ eval: symbol T
+
+  |.................................................................| 100%
+  ordinary text without R code
+
+
+output file: sPlot_Phylo.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS sPlot_Phylo.utf8.md --to markdown_strict --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output sPlot_Phylo.md --standalone --bibliography bibliography.bib --filter /usr/bin/pandoc-citeproc 
+
+Output created: sPlot_Phylo.md
+> render("sPlot_Phylo.Rmd", c("github_document"))
+
+
+processing file: sPlot_Phylo.Rmd
+  |.                                                                |   1%
+   inline R code fragments
+
+  |..                                                               |   2%
+label: unnamed-chunk-1 (with options) 
+List of 3
+ $ echo : symbol T
+ $ eval : symbol T
+ $ quiet: symbol T
+
+  |..                                                               |   4%
+  ordinary text without R code
+
+  |...                                                              |   5%
+label: unnamed-chunk-2 (with options) 
+List of 2
+ $ echo: symbol F
+ $ eval: symbol F
+
+  |....                                                             |   6%
+  ordinary text without R code
+
+  |.....                                                            |   7%
+label: unnamed-chunk-3 (with options) 
+List of 2
+ $ echo: symbol F
+ $ eval: symbol F
+
+  |.....                                                            |   8%
+  ordinary text without R code
+
+  |......                                                           |  10%
+label: unnamed-chunk-4 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.......                                                          |  11%
+  ordinary text without R code
+
+  |........                                                         |  12%
+label: unnamed-chunk-5 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |.........                                                        |  13%
+  ordinary text without R code
+
+  |.........                                                        |  14%
+label: unnamed-chunk-6 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |..........                                                       |  16%
+  ordinary text without R code
+
+  |...........                                                      |  17%
+label: unnamed-chunk-7 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |............                                                     |  18%
+  ordinary text without R code
+
+  |.............                                                    |  19%
+label: unnamed-chunk-8 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |.............                                                    |  20%
+  ordinary text without R code
+
+  |..............                                                   |  22%
+label: unnamed-chunk-9 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |...............                                                  |  23%
+  ordinary text without R code
+
+  |................                                                 |  24%
+label: unnamed-chunk-10 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |................                                                 |  25%
+  ordinary text without R code
+
+  |.................                                                |  27%
+label: unnamed-chunk-11 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |..................                                               |  28%
+  ordinary text without R code
+
+  |...................                                              |  29%
+label: unnamed-chunk-12 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |....................                                             |  30%
+  ordinary text without R code
+
+  |....................                                             |  31%
+label: unnamed-chunk-13 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |.....................                                            |  33%
+  ordinary text without R code
+
+  |......................                                           |  34%
+label: unnamed-chunk-14 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |.......................                                          |  35%
+  ordinary text without R code
+
+  |.......................                                          |  36%
+label: unnamed-chunk-15 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |........................                                         |  37%
+  ordinary text without R code
+
+  |.........................                                        |  39%
+label: unnamed-chunk-16 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |..........................                                       |  40%
+  ordinary text without R code
+
+  |...........................                                      |  41%
+label: unnamed-chunk-17 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |...........................                                      |  42%
+  ordinary text without R code
+
+  |............................                                     |  43%
+label: unnamed-chunk-18 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.............................                                    |  45%
+  ordinary text without R code
+
+  |..............................                                   |  46%
+label: unnamed-chunk-19 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |...............................                                  |  47%
+  ordinary text without R code
+
+  |...............................                                  |  48%
+label: unnamed-chunk-20 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |................................                                 |  49%
+  ordinary text without R code
+
+  |.................................                                |  51%
+label: unnamed-chunk-21 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |..................................                               |  52%
+  ordinary text without R code
+
+  |..................................                               |  53%
+label: unnamed-chunk-22 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |...................................                              |  54%
+  ordinary text without R code
+
+  |....................................                             |  55%
+label: unnamed-chunk-23 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.....................................                            |  57%
+  ordinary text without R code
+
+  |......................................                           |  58%
+label: unnamed-chunk-24 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |......................................                           |  59%
+  ordinary text without R code
+
+  |.......................................                          |  60%
+label: unnamed-chunk-25 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |........................................                         |  61%
+  ordinary text without R code
+
+  |.........................................                        |  63%
+label: unnamed-chunk-26 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |..........................................                       |  64%
+  ordinary text without R code
+
+  |..........................................                       |  65%
+label: unnamed-chunk-27 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |...........................................                      |  66%
+  ordinary text without R code
+
+  |............................................                     |  67%
+label: unnamed-chunk-28 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.............................................                    |  69%
+  ordinary text without R code
+
+  |.............................................                    |  70%
+label: unnamed-chunk-29 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |..............................................                   |  71%
+  ordinary text without R code
+
+  |...............................................                  |  72%
+label: unnamed-chunk-30 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |................................................                 |  73%
+  ordinary text without R code
+
+  |.................................................                |  75%
+label: unnamed-chunk-31 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.................................................                |  76%
+  ordinary text without R code
+
+  |..................................................               |  77%
+label: unnamed-chunk-32 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |...................................................              |  78%
+  ordinary text without R code
+
+  |....................................................             |  80%
+label: unnamed-chunk-33 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |....................................................             |  81%
+  ordinary text without R code
+
+  |.....................................................            |  82%
+label: unnamed-chunk-34 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |......................................................           |  83%
+  ordinary text without R code
+
+  |.......................................................          |  84%
+label: unnamed-chunk-35 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |........................................................         |  86%
+  ordinary text without R code
+
+  |........................................................         |  87%
+label: unnamed-chunk-36 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.........................................................        |  88%
+  ordinary text without R code
+
+  |..........................................................       |  89%
+label: unnamed-chunk-37 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |...........................................................      |  90%
+  ordinary text without R code
+
+  |............................................................     |  92%
+label: unnamed-chunk-38 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |............................................................     |  93%
+  ordinary text without R code
+
+  |.............................................................    |  94%
+label: unnamed-chunk-39 (with options) 
+List of 1
+ $ out.width: chr "470px"
+
+  |..............................................................   |  95%
+  ordinary text without R code
+
+  |...............................................................  |  96%
+label: unnamed-chunk-40 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |...............................................................  |  98%
+  ordinary text without R code
+
+  |................................................................ |  99%
+label: unnamed-chunk-41 (with options) 
+List of 1
+ $ eval: symbol T
+
+  |.................................................................| 100%
+  ordinary text without R code
+
+
+output file: sPlot_Phylo.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS sPlot_Phylo.utf8.md --to markdown_github-ascii_identifiers --from markdown+autolink_bare_uris+tex_math_single_backslash --output sPlot_Phylo.md --standalone --template /home/oliver/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmarkdown/templates/github_document/resources/default.md --bibliography bibliography.bib --filter /usr/bin/pandoc-citeproc 
+/usr/bin/pandoc +RTS -K512m -RTS sPlot_Phylo.md --to html --from markdown_github-ascii_identifiers --output sPlot_Phylo.html --standalone --self-contained --highlight-style pygments --template /home/oliver/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmarkdown/templates/github_document/resources/preview.html --variable 'github-markdown-css:/home/oliver/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmarkdown/templates/github_document/resources/github.css' --email-obfuscation none 
+
+Preview created: sPlot_Phylo.html
+
+Output created: sPlot_Phylo.md
+> render("sPlot_Phylo.Rmd", c("github_document"))
+
+
+processing file: sPlot_Phylo.Rmd
+  |.                                                                |   1%
+   inline R code fragments
+
+  |..                                                               |   2%
+label: unnamed-chunk-1 (with options) 
+List of 3
+ $ echo : symbol T
+ $ eval : symbol T
+ $ quiet: symbol T
+
+  |..                                                               |   4%
+  ordinary text without R code
+
+  |...                                                              |   5%
+label: unnamed-chunk-2 (with options) 
+List of 2
+ $ echo: symbol F
+ $ eval: symbol F
+
+  |....                                                             |   6%
+  ordinary text without R code
+
+  |.....                                                            |   7%
+label: unnamed-chunk-3 (with options) 
+List of 2
+ $ echo: symbol F
+ $ eval: symbol F
+
+  |.....                                                            |   8%
+  ordinary text without R code
+
+  |......                                                           |  10%
+label: unnamed-chunk-4 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.......                                                          |  11%
+  ordinary text without R code
+
+  |........                                                         |  12%
+label: unnamed-chunk-5 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |.........                                                        |  13%
+  ordinary text without R code
+
+  |.........                                                        |  14%
+label: unnamed-chunk-6 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |..........                                                       |  16%
+  ordinary text without R code
+
+  |...........                                                      |  17%
+label: unnamed-chunk-7 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |............                                                     |  18%
+  ordinary text without R code
+
+  |.............                                                    |  19%
+label: unnamed-chunk-8 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |.............                                                    |  20%
+  ordinary text without R code
+
+  |..............                                                   |  22%
+label: unnamed-chunk-9 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |...............                                                  |  23%
+  ordinary text without R code
+
+  |................                                                 |  24%
+label: unnamed-chunk-10 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |................                                                 |  25%
+  ordinary text without R code
+
+  |.................                                                |  27%
+label: unnamed-chunk-11 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |..................                                               |  28%
+  ordinary text without R code
+
+  |...................                                              |  29%
+label: unnamed-chunk-12 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |....................                                             |  30%
+  ordinary text without R code
+
+  |....................                                             |  31%
+label: unnamed-chunk-13 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |.....................                                            |  33%
+  ordinary text without R code
+
+  |......................                                           |  34%
+label: unnamed-chunk-14 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |.......................                                          |  35%
+  ordinary text without R code
+
+  |.......................                                          |  36%
+label: unnamed-chunk-15 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |........................                                         |  37%
+  ordinary text without R code
+
+  |.........................                                        |  39%
+label: unnamed-chunk-16 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |..........................                                       |  40%
+  ordinary text without R code
+
+  |...........................                                      |  41%
+label: unnamed-chunk-17 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |...........................                                      |  42%
+  ordinary text without R code
+
+  |............................                                     |  43%
+label: unnamed-chunk-18 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.............................                                    |  45%
+  ordinary text without R code
+
+  |..............................                                   |  46%
+label: unnamed-chunk-19 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |...............................                                  |  47%
+  ordinary text without R code
+
+  |...............................                                  |  48%
+label: unnamed-chunk-20 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |................................                                 |  49%
+  ordinary text without R code
+
+  |.................................                                |  51%
+label: unnamed-chunk-21 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |..................................                               |  52%
+  ordinary text without R code
+
+  |..................................                               |  53%
+label: unnamed-chunk-22 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |...................................                              |  54%
+  ordinary text without R code
+
+  |....................................                             |  55%
+label: unnamed-chunk-23 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.....................................                            |  57%
+  ordinary text without R code
+
+  |......................................                           |  58%
+label: unnamed-chunk-24 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |......................................                           |  59%
+  ordinary text without R code
+
+  |.......................................                          |  60%
+label: unnamed-chunk-25 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |........................................                         |  61%
+  ordinary text without R code
+
+  |.........................................                        |  63%
+label: unnamed-chunk-26 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |..........................................                       |  64%
+  ordinary text without R code
+
+  |..........................................                       |  65%
+label: unnamed-chunk-27 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |...........................................                      |  66%
+  ordinary text without R code
+
+  |............................................                     |  67%
+label: unnamed-chunk-28 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.............................................                    |  69%
+  ordinary text without R code
+
+  |.............................................                    |  70%
+label: unnamed-chunk-29 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |..............................................                   |  71%
+  ordinary text without R code
+
+  |...............................................                  |  72%
+label: unnamed-chunk-30 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |................................................                 |  73%
+  ordinary text without R code
+
+  |.................................................                |  75%
+label: unnamed-chunk-31 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.................................................                |  76%
+  ordinary text without R code
+
+  |..................................................               |  77%
+label: unnamed-chunk-32 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |...................................................              |  78%
+  ordinary text without R code
+
+  |....................................................             |  80%
+label: unnamed-chunk-33 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |....................................................             |  81%
+  ordinary text without R code
+
+  |.....................................................            |  82%
+label: unnamed-chunk-34 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |......................................................           |  83%
+  ordinary text without R code
+
+  |.......................................................          |  84%
+label: unnamed-chunk-35 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |........................................................         |  86%
+  ordinary text without R code
+
+  |........................................................         |  87%
+label: unnamed-chunk-36 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.........................................................        |  88%
+  ordinary text without R code
+
+  |..........................................................       |  89%
+label: unnamed-chunk-37 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |...........................................................      |  90%
+  ordinary text without R code
+
+  |............................................................     |  92%
+label: unnamed-chunk-38 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |............................................................     |  93%
+  ordinary text without R code
+
+  |.............................................................    |  94%
+label: unnamed-chunk-39 (with options) 
+List of 1
+ $ out.width: chr "470px"
+
+  |..............................................................   |  95%
+  ordinary text without R code
+
+  |...............................................................  |  96%
+label: unnamed-chunk-40 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |...............................................................  |  98%
+  ordinary text without R code
+
+  |................................................................ |  99%
+label: unnamed-chunk-41 (with options) 
+List of 1
+ $ eval: symbol T
+
+  |.................................................................| 100%
+  ordinary text without R code
+
+
+output file: sPlot_Phylo.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS sPlot_Phylo.utf8.md --to markdown_github-ascii_identifiers --from markdown+autolink_bare_uris+tex_math_single_backslash --output sPlot_Phylo.md --standalone --template /home/oliver/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmarkdown/templates/github_document/resources/default.md --bibliography bibliography.bib --filter /usr/bin/pandoc-citeproc 
+/usr/bin/pandoc +RTS -K512m -RTS sPlot_Phylo.md --to html --from markdown_github-ascii_identifiers --output sPlot_Phylo.html --standalone --self-contained --highlight-style pygments --template /home/oliver/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmarkdown/templates/github_document/resources/preview.html --variable 'github-markdown-css:/home/oliver/R/x86_64-pc-linux-gnu-library/3.4/rmarkdown/rmarkdown/templates/github_document/resources/github.css' --email-obfuscation none 
+
+Preview created: sPlot_Phylo.html
+
+Output created: sPlot_Phylo.md
 > 
