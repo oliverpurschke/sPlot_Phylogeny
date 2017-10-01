@@ -1,0 +1,236 @@
+---
+title: "Phylogenetic tree for the taxa in sPlot 2.1"
+author: Oliver Purschke
+keywords: database, big data, phylogeny, taxonomy
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+disqusIdentifier: 2c5a0040
+tags: 
+- database
+- big data
+- traits
+- taxonomy
+output:
+  pdf_document:
+    number_sections: true
+    toc: true
+    toc_depth: 2
+  html_document:
+    number_sections: true
+    toc: true
+    toc_depth: 2
+    theme: united	
+abstract: "This document describes the workflow (with contributions from Brody Sandel) that was used to generate the phylogenetic tree for the taxa in the global vegetation plot database sPlot version 2.1."
+urlcolor: blue
+bibliography: bibliography.bib
+csl: journal-of-ecology.csl
+# header-includes:
+#   - \usepackage{lineno}
+#   - \linenumbers
+---
+
+# Combine taxon names from sPlot 2.0 and TRY 3.0
+
+## Load required packages
+```{r, echo = T, eval = T, quiet = T}
+library(ape)
+library(geiger)
+```
+
+```{r, echo = F, eval = F}
+library(rmarkdown)
+render("sPlot_Phylo.Rmd", c("html_document", "pdf_document"))
+```
+
+## Identify species in splot that are not in the tank tree
+Start with the Tank-tree in Zanne et al. as a reference tree, but later use the corrected version of that tree by Qian.
+
+### Get the taxonmic backbone
+
+```{r, echo = T, eval = F}
+# githubURL <- "https://rawgit.com/oliverpurschke/Taxonomic_Backbone/master/backbone.splot2.1.try3.is.vascular.Rdata"
+# load(url(githubURL))
+load("../backbone.splot2.1.try3.is.vascular.Rdata")
+```
+
+```{r, echo = T, eval = T}
+str(backbone.splot2.1.try3)
+```
+  * 
+```{r, echo = T, eval = F}
+splot.try.nam <- unique(backbone.splot2.1.try3$name.short.correct)
+```
+
+```{r, echo = T, eval = T}
+splot.try.nam[10:20]
+```
+
+### Select species in sPlot 2.1
+
+```{r, echo = T, eval = T}
+splot.nam <- backbone.splot2.1.try3[backbone.splot2.1.try3$sPlot.TRY != "T",c(4,32)]
+table(splot.nam$sPlot.TRY)
+head(splot.nam)
+splot.nam.2 <- unique(splot.nam$name.short.correct)
+
+any(is.na(splot.nam.2))
+
+na.ind <- which(is.na(splot.nam.2))
+splot.nam.3 <- splot.nam.2[-na.ind]
+any(is.na(splot.nam.3))
+
+```
+
+61214 unique resolved species in splot 2.1
+
+
+```{r, echo = T, eval = F}
+splot.nam.4 <- gsub(" ", "_", splot.nam.3)
+```
+
+#### Which species in splot are not in the tank tree?
+
+```{r, echo = T, eval = F}
+library(ape)
+tank.tree <- read.tree("/home/oliver/Dokumente/PhD/PostPhD/IDiv/sDiv/sPlot/Analyses/Data/Phylogeny/2/PhylogeneticResources/Vascular_Plants_rooted.dated.tre")
+
+ind.miss <- splot.nam.4 %in% tank.tree$tip.label 
+
+table(ind.miss)
+
+```
+
+Only 25% of the species in splot are in the tank tree
+Before running `addCongeners` inspect missing species to see whether there are obvious species that should be there
+
+```{r, echo = T, eval = F}
+splot.nam.miss <- splot.nam.4[ind.miss==F]
+
+write.csv(sort(splot.nam.miss), file = "splot.nam.miss.csv")
+```
+
+```{r, echo = T, eval = T}
+length(splot.nam.miss)
+```
+
+### Tree grafting function (Written by Brody, Dec 2, 2014)
+
+Takes a tree and species list, each containing "Genus_species" formatted names. For each species in the list, if it has a congener on the tree but is not itself on the tree, add it next to a  randomly selected congener at a random position along the edge returns a larger tree.
+
+```{r, echo = T, eval = T}
+addCongeners = function(tree,speciesToAdd)
+  {
+	resample <- function(x, ...) x[sample.int(length(x), ...)]
+
+	staGenus = unlist(lapply(strsplit(speciesToAdd,"_"),function(i){i[[1]]}))
+	gtree = tree
+	for(i in sample(1:length(speciesToAdd),length(speciesToAdd),replace = F))
+		{	
+
+
+		gtreeGenera = unlist(lapply(strsplit(gtree$tip,"_"),function(i){i[[1]]}))
+		
+		#If the species isn't on the tree but a congener is
+		if(!speciesToAdd[i] %in% tree$tip.label & staGenus[i] %in% gtreeGenera)
+			{
+			branchName = gtree$tip[resample(which(gtreeGenera == staGenus[i]),1)]
+			newtree = sim.bdtree(n=2)
+			newtree$tip.label = c(branchName,speciesToAdd[i])
+
+			edgeL = gtree$edge.length[which.edge(gtree,branchName)]
+
+			#Splice in at a random depth between 0 and 1
+			depth = runif(1,0,1)
+			newtree$edge.length = depth*newtree$edge.length*edgeL/max(newtree$edge.length)
+
+			whereToGraft = which(gtree$tip == branchName)
+			gtree = bind.tree(gtree,newtree,where = whereToGraft,position = edgeL*depth)
+
+			#The grafting process duplicates the branchName tip. Drop one of them.
+			gtree = drop.tip(gtree, which(gtree$tip == branchName)[1])
+			}
+		}
+	return(gtree)
+	}
+```
+
+
+## Run "addCongeners" on RStudio-server
+
+```{r, echo = T, eval = F}
+
+# do not run:
+
+tank.tree.added <- addCongeners(tank.tree, splot.nam.miss)
+splot2.1.tank.tree.70287 <- tank.tree.added
+
+```
+Takes 4.5 hours to add the missing 45784 species. 7247 species could not be added (11.8% of all resolved taxa in sPlot). We have a phylogeny for 53967 of the 61214 standardized taxa in sPlot 2.1 (anyway, lichens, mosses and some weird stuff are still included here).
+
+
+
+
+```{r, echo = T, eval = F}
+splot2.1.tank.tree.70287 <- read.tree("/home/oliver/Dokumente/PhD/PostPhD/IDiv/sDiv/sPlot/Analyses/Data/Phylogeny/sPlot2.1Phylo/splot2.1.tank.tree.70287.tre")
+
+ind.miss.2 <- splot.nam.miss %in% splot2.1.tank.tree.70287$tip.label 
+splot.nam.miss.2 <- splot.nam.miss[ind.miss.2==F]
+write.csv(sort(splot.nam.miss.2), file = "splot.nam.miss.2.csv")
+```
+
+```{r, echo = T, eval = T}
+length(splot.nam.miss.2)
+```
+7246 names sPlot could not be crafted onto the tank-tree
+
+
+### Craft species onto the extended version of the Tank-tree by Qian
+
+
+```{r, echo = T, eval = F}
+
+```
+
+
+
+
+#### Prune to sPlot 2.1 data
+
+```{r, echo = T, eval = F}
+pruned.tree <- drop.tip(phyto.phylo.splot2.1.69335, setdiff(phyto.phylo.splot2.1.69335$tip.label, splot.nam.4))
+
+phyto.phylo.splot2.1.54067 <- pruned.tree
+
+write.tree(phyto.phylo.splot2.1.54067, file = "phyto.phylo.splot2.1.54067.tre")
+
+phyto.phylo.splot2.1.54067 <- read.tree("phyto.phylo.splot2.1.54067.tre")
+```
+
+```{r, echo = T, eval = F}
+16121/54067
+```
+
+Of the 54067 species that are now in the sPlot2.1 tree, ~30% of them are were actually found in the Qian-corrected Tank tree, the remainder was added as congeners.
+
+Should contain 54067 species
+
+```{r, echo = T, eval = F}
+pdf("phyto.phylo.tree.splot.54067.pdf", height = 220, width = 220)
+plot(phyto.phylo.splot2.1.54067, "f", edge.width = .4, label.offset = .03, cex = .1)
+dev.off()
+
+png("phyto.phylo.tree.splot.54067.png", height = 10000, width = 10000, pointsize = 1, res = 4000)
+plot(phyto.phylo.splot2.1.54067, "f", edge.width = .1, label.offset = .03, cex = .1)
+dev.off()
+```
+
+
+
+--------------------
+
+# `R`-settings
+
+```{r, eval = T}
+sessionInfo()
+```
+
+# References

@@ -1,0 +1,271 @@
+
+R version 3.4.1 (2017-06-30) -- "Single Candle"
+Copyright (C) 2017 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R ist freie Software und kommt OHNE JEGLICHE GARANTIE.
+Sie sind eingeladen, es unter bestimmten Bedingungen weiter zu verbreiten.
+Tippen Sie 'license()' or 'licence()' für Details dazu.
+
+R ist ein Gemeinschaftsprojekt mit vielen Beitragenden.
+Tippen Sie 'contributors()' für mehr Information und 'citation()',
+um zu erfahren, wie R oder R packages in Publikationen zitiert werden können.
+
+Tippen Sie 'demo()' für einige Demos, 'help()' für on-line Hilfe, oder
+'help.start()' für eine HTML Browserschnittstelle zur Hilfe.
+Tippen Sie 'q()', um R zu verlassen.
+
+> if(identical(getOption('pager'), file.path(R.home('bin'), 'pager'))) # rather take the ESS one
++       options(pager='cat')
+> options(STERM='iESS', str.dendrogram.last="'", editor='emacsclient', show.error.locations=TRUE)
+> library(ape)
+> library(geiger)
+> hallo oliver ich will doch nur noch ein touch was nicht immer rum spinnt ()
+Fehler: unerwartetes Symbol in "hallo oliver"
+> library(rmarkdown)
+> load("../backbone.splot2.1.try3.is.vascular.Rdata")
+> str(backbone.splot2.1.try3)
+'data.frame':	130602 obs. of  35 variables:
+ $ Name_number                 : int  1 2 3 4 5 6 7 8 9 10 ...
+ $ names.sPlot.TRY             : chr  "?" "0" "[1269 Chlorophytum platt]" "[1284 Echinochloa]" ...
+ $ names.corr.string           : chr  "?" "0" "[1269 Chlorophytum platt]" "[1284 Echinochloa]" ...
+ $ sPlot.TRY                   : chr  "S" "S" "S" "S" ...
+ $ Name_submitted              : chr  "Spermatophyta sp." "Spermatophyta sp." "Chlorophytum sp. [1269]" "Echinochloa sp." ...
+ $ Overall_score               : num  0 0 0.9 0.9 0.9 0.9 0.9 0 0.9 0 ...
+ $ Name_matched                : chr  "No suitable matches found." "No suitable matches found." "Chlorophytum" "Echinochloa" ...
+ $ Name_matched_rank           : chr  "" "" "genus" "genus" ...
+ $ Name_score                  : num  0 0 1 1 1 1 1 0 1 0 ...
+ $ Family_score                : num  0 0 NA NA NA NA 1 0 1 0 ...
+ $ Name_matched_accepted_family: chr  "" "" "Asparagaceae" "Poaceae" ...
+ $ Genus_matched               : chr  "" "" "Chlorophytum" "Echinochloa" ...
+ $ Genus_score                 : num  0 0 1 1 1 1 NA 0 NA 0 ...
+ $ Specific_epithet_matched    : chr  "" "" "" "" ...
+ $ Specific_epithet_score      : num  0 0 NA NA NA NA NA 0 NA 0 ...
+ $ Unmatched_terms             : chr  "" "" "\"\"sp. [1269]" "\"\"sp." ...
+ $ Taxonomic_status            : chr  "" "" "Accepted" "Accepted" ...
+ $ Accepted_name               : chr  "" "" "Chlorophytum" "Echinochloa" ...
+ $ Accepted_name_author        : chr  "" "" "" "" ...
+ $ Accepted_name_rank          : chr  "" "" "genus" "genus" ...
+ $ Accepted_name_url           : chr  "" "" "http://www.theplantlist.org/tpl1.1/search?q=Chlorophytum" "http://www.theplantlist.org/tpl1.1/search?q=Echinochloa" ...
+ $ Accepted_name_species       : chr  "" "" "" "" ...
+ $ Accepted_name_family        : chr  "" "" "Asparagaceae" "Poaceae" ...
+ $ Selected                    : chr  "true" "true" "true" "true" ...
+ $ Source                      : chr  "" "" "tpl" "tpl" ...
+ $ Warnings                    : chr  " " " " " " " " ...
+ $ Manual.matching             : chr  NA NA NA NA ...
+ $ Status.correct              : chr  "No suitable matches found." "No suitable matches found." "Accepted" "Accepted" ...
+ $ name.correct                : chr  "No suitable matches found." "No suitable matches found." "Chlorophytum" "Echinochloa" ...
+ $ rank.correct                : chr  "higher" "higher" "genus" "genus" ...
+ $ family.correct              : chr  "" "" "Asparagaceae" "Poaceae" ...
+ $ name.short.correct          : chr  NA NA "Chlorophytum" "Echinochloa" ...
+ $ rank.short.correct          : chr  "higher" "higher" "genus" "genus" ...
+ $ is.vascular.species         : logi  NA NA TRUE TRUE TRUE TRUE ...
+ $ sPlot2.1.TRY                : chr  "S" "S" "S" "S" ...
+> splot.try.nam <- unique(backbone.splot2.1.try3$name.short.correct)
+> splot.try.nam[10:20]
+ [1] "Aa colombiana"         "Aa denticulata"        "Agropogon"            
+ [4] "Aa maderoi"            "Aa paleacea"           "Aa riobambae"         
+ [7] "Aaronsohnia pubescens" "Aa"                    "Abarema acreana"      
+[10] "Abarema adenophora"    "Abarema auriculata"   
+> splot.nam <- backbone.splot2.1.try3[backbone.splot2.1.try3$sPlot.TRY != "T",c(4,32)]
+> table(splot.nam$sPlot.TRY)
+
+    S    ST 
+70329 24796 
+> head(splot.nam)
+  sPlot.TRY name.short.correct
+1         S               <NA>
+2         S               <NA>
+3         S       Chlorophytum
+4         S        Echinochloa
+5         S         Indigofera
+6         S           Polygala
+> splot.nam.2 <- unique(splot.nam$name.short.correct)
+> any(is.na(splot.nam.2))
+[1] TRUE
+> na.ind <- which(is.na(splot.nam.2))
+> splot.nam.3 <- splot.nam.2[-na.ind]
+> any(is.na(splot.nam.3))
+[1] FALSE
+> splot.nam.4 <- gsub(" ", "_", splot.nam.3)
+> library(ape)
+> tank.tree <- read.tree("/home/oliver/Dokumente/PhD/PostPhD/IDiv/sDiv/sPlot/Analyses/Data/Phylogeny/2/PhylogeneticResources/Vascular_Plants_rooted.dated.tre")
+ind.miss <- splot.nam.4 %in% tank.tree$tip.label
+table(ind.miss)
+> 
+> 
+ind.miss
+FALSE  TRUE 
+45784 15430 
+> splot.nam.miss <- splot.nam.4[ind.miss==F]
+> length(splot.nam.miss)
+[1] 45784
+> phyto.phylo.tree <- read.tree("/home/oliver/Dokumente/PhD/PostPhD/IDiv/sDiv/sPlot/Analyses/Data/Phylogeny/Qian_PhytoPhylo/AppendixS5/PhytoPhylo.tre")
+> ind.miss <- splot.nam.4 %in% phyto.phylo.tree$tip.label
+> table(ind.miss)
+ind.miss
+FALSE  TRUE 
+45093 16121 
+> ind.miss.3 <- splot.nam.miss.phyto.phylo %in% phyto.phylo.splot2.1.69335$tip.label 
+Fehler in splot.nam.miss.phyto.phylo %in% phyto.phylo.splot2.1.69335$tip.label : 
+  Objekt 'splot.nam.miss.phyto.phylo' nicht gefunden
+> table(ind.miss.3)
+Fehler in table(ind.miss.3) : Objekt 'ind.miss.3' nicht gefunden
+> phyto.phylo.splot2.1.69335 <- read.tree("/home/oliver/Dokumente/PhD/PostPhD/IDiv/sDiv/sPlot/Analyses/Data/Phylogeny/sPlot2.1Phylo/phyto.phylo.splot2.1.69335.tre")
+> ind.miss.3 <- splot.nam.miss.phyto.phylo %in% phyto.phylo.splot2.1.69335$tip.label 
+Fehler in splot.nam.miss.phyto.phylo %in% phyto.phylo.splot2.1.69335$tip.label : 
+  Objekt 'splot.nam.miss.phyto.phylo' nicht gefunden
+> table(ind.miss.3)
+Fehler in table(ind.miss.3) : Objekt 'ind.miss.3' nicht gefunden
+> splot.nam.miss.phyto.phylo <- splot.nam.4[ind.miss==F]
+> ind.miss.3 <- splot.nam.miss.phyto.phylo %in% phyto.phylo.splot2.1.69335$tip.label 
+> table(ind.miss.3)
+ind.miss.3
+FALSE  TRUE 
+ 7147 37946 
+> splot.nam.miss.3 <- splot.nam.miss.phyto.phylo[ind.miss.3==F]
+> render("sPlot_Phylo.Rmd", c("html_document", "pdf_document"))
+
+
+processing file: sPlot_Phylo.Rmd
+  |..                                                               |   2%
+   inline R code fragments
+
+  |...                                                              |   5%
+label: unnamed-chunk-1 (with options) 
+List of 3
+ $ echo : symbol T
+ $ eval : symbol T
+ $ quiet: symbol T
+
+  |.....                                                            |   7%
+  ordinary text without R code
+
+  |......                                                           |  10%
+label: unnamed-chunk-2 (with options) 
+List of 2
+ $ echo: symbol F
+ $ eval: symbol F
+
+  |........                                                         |  12%
+  ordinary text without R code
+
+  |..........                                                       |  15%
+label: unnamed-chunk-3 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |...........                                                      |  17%
+  ordinary text without R code
+
+  |.............                                                    |  20%
+label: unnamed-chunk-4 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |..............                                                   |  22%
+  ordinary text without R code
+
+  |................                                                 |  24%
+label: unnamed-chunk-5 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.................                                                |  27%
+  ordinary text without R code
+
+  |...................                                              |  29%
+label: unnamed-chunk-6 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |.....................                                            |  32%
+  ordinary text without R code
+
+  |......................                                           |  34%
+label: unnamed-chunk-7 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |........................                                         |  37%
+  ordinary text without R code
+
+  |.........................                                        |  39%
+label: unnamed-chunk-8 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |...........................                                      |  41%
+  ordinary text without R code
+
+  |.............................                                    |  44%
+label: unnamed-chunk-9 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |..............................                                   |  46%
+  ordinary text without R code
+
+  |................................                                 |  49%
+label: unnamed-chunk-10 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |.................................                                |  51%
+  ordinary text without R code
+
+  |...................................                              |  54%
+label: unnamed-chunk-11 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |....................................                             |  56%
+  ordinary text without R code
+
+  |......................................                           |  59%
+label: unnamed-chunk-12 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+  |........................................                         |  61%
+  ordinary text without R code
+
+  |.........................................                        |  63%
+label: unnamed-chunk-13 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |...........................................                      |  66%
+  ordinary text without R code
+
+  |............................................                     |  68%
+label: unnamed-chunk-14 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol F
+
+  |..............................................                   |  71%
+  ordinary text without R code
+
+  |................................................                 |  73%
+label: unnamed-chunk-15 (with options) 
+List of 2
+ $ echo: symbol T
+ $ eval: symbol T
+
+Quitting from lines 181-182 (sPlot_Phylo.Rmd) 
+Fehler in eval(expr, envir, enclos) : 
+  Objekt 'splot.nam.miss.2' nicht gefunden
+
+> 
